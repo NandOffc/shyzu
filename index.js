@@ -35,7 +35,7 @@ async function whatsappConnect() {
     let { state, saveCreds } = await useMultiFileAuthState("all/connect")
     var shyzu = makeConnectionShyzu({
     printQRInterminal: !useOfPairing,
-    browser: ["Linux", "Safari", ""],
+    browser: ["Ubuntu", "Chrome", "20.0.04"],
     logger: pino({ level: "silent" }),
     auth: state
     })
