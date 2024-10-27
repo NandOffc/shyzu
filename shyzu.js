@@ -83,7 +83,7 @@ module.exports = async (shyzu, m) => {
         return (views / 1000).toFixed(1) + 'K';
     } else {
         return views.toString();
-    }
+ }
     }
     
     switch (command) {
@@ -123,8 +123,8 @@ module.exports = async (shyzu, m) => {
         let hour = date.getHours();
         let minute = date.getMinutes();
         let second = date.getSeconds();
-        let x = `${day}/${month}/${year} ${hour}:${minute}:${second}`;
-        m.reply(x)
+        let x2 = `${day}/${month}/${year} ${hour}:${minute}:${second}`;
+        m.reply(x2)
         }
         break
         
@@ -138,19 +138,19 @@ module.exports = async (shyzu, m) => {
         })
         let { id, region, title, play, duration, play_count, comment_count, share_count, download_count, collect_count, author } = data.result
         let { nickname } = author
-        var x = `┌─⊷ *T I K T O K*`
-        x += `\n${xicon} *Author:* ${nickname}`
-        x += `\n${xicon} *ID:* ${id}`
-        x += `\n${xicon} *Region:* ${region}`
-        x += `\n${xicon} *Title:* ${title}`
-        x += `\n${xicon} *Duration:* ${duration + " Seconds"}`
-        x += `\n${xicon} *Play Count:* ${format(play_count)}`
-        x += `\n${xicon} *Comment Count:* ${format(comment_count)}`
-        x += `\n${xicon} *Share Count:* ${format(share_count)}`
-        x += `\n${xicon} *Download Count:* ${format(download_count)}`
-        x += `\n${xicon} *Collect Count:* ${format(collect_count)}`
-        x += `\n└──────────`
-        shyzu.sendMessage(m.chat, { video: { url: play }, fileLength: 10630044057600000000000000000000000000000000000000000000000000, caption: x }, { quoted: m })
+        var x1 = `┌─⊷ *T I K T O K*`
+        x1 += `\n${xicon} *Author:* ${nickname}`
+        x1 += `\n${xicon} *ID:* ${id}`
+        x1 += `\n${xicon} *Region:* ${region}`
+        x1 += `\n${xicon} *Title:* ${title}`
+        x1 += `\n${xicon} *Duration:* ${duration + " Seconds"}`
+        x1 += `\n${xicon} *Play Count:* ${format(play_count)}`
+        x1 += `\n${xicon} *Comment Count:* ${format(comment_count)}`
+        x1 += `\n${xicon} *Share Count:* ${format(share_count)}`
+        x1 += `\n${xicon} *Download Count:* ${format(download_count)}`
+        x1 += `\n${xicon} *Collect Count:* ${format(collect_count)}`
+        x1 += `\n└──────────`
+        shyzu.sendMessage(m.chat, { video: { url: play }, fileLength: 10630044057600000000000000000000000000000000000000000000000000, caption: hil }, { quoted: m })
         } catch ({ message }) {
         m.reply(message)
         }
